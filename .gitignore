@@ -1,0 +1,57 @@
+# CLion / JetBrains IDE 관련 (전체 .idea는 무시하는 게 일반적)
+.idea/
+*.iml
+*.iws
+
+# CLion CMake 빌드 디렉토리 (프로필별로 생성됨)
+cmake-build-*
+build/
+out/
+bin/
+Debug/
+Release/
+x64/
+x86/
+
+# CUDA / NVCC 관련 임시 파일 (컴파일 중 생성되는 중간 파일들)
+*.o
+*.obj
+*.cu.o
+*.cudafe1.*
+*.fatbin
+*.ptx
+*.cubin
+*.linkinfo
+*.nvlink
+*.dlink
+*.dlinkstub
+
+# 실행 파일 및 라이브러리 (빌드 결과물)
+*.exe
+*.out
+*.dll
+*.so
+*.a
+*.lib
+cuda_test          # 당신의 실행 파일 이름 (필요 시 추가/변경)
+cuda_test.exe
+
+# 기타 일반적인 무시 항목
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store           # macOS
+Thumbs.db           # Windows
+.vscode/            # VS Code 사용 중이라면
+
+# 만약 NVIDIA Nsight나 다른 도구 쓰면 추가
+*.nsight*
+*.nvvp*
+
+# 필요 시 개인 데이터/테스트 파일 무시 (선택)
+data/
+tests/
+scratch/
+personal/
