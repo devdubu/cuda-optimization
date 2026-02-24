@@ -14,9 +14,14 @@ set(CMAKE_CUDA_ARCHITECTURES 86)
 
 # ★ 핵심: OBJECT 제거하고 executable 하나만!
 add_executable(cuda_test main.cu)
+add_executable(cuda_test_pipeline multiStagePipeline.cu)
 
 # separable compilation 활성화 (커널 분리 컴파일 추천)
 set_target_properties(cuda_test PROPERTIES
+        CUDA_SEPARABLE_COMPILATION ON
+)
+
+set_target_properties(cuda_test_pipeline PROPERTIES
         CUDA_SEPARABLE_COMPILATION ON
 )
 

@@ -6,6 +6,7 @@ set(CMAKE_CUDA_ARCHITECTURES 86)  # GPU에 맞게 수정 (RTX 30/40 → 86 or 89
 
 add_executable(cuda_test
         main.cu          # 만약 main이 .cu라면
+        multiStagePipeline.cu
         kernel.cu        # ← 여기 추가! (당신이 만든 파일 이름)
 )
 
